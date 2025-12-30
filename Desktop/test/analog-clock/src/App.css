@@ -1,0 +1,67 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.heading {
+  text-align: center;
+}
+.clock {
+  border: 4px solid #000;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 50%;
+  margin: auto;
+}
+.clock .hand {
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.clock .hand::after {
+  content: "";
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.clock .hand.hour {
+  height: 5px;
+  width: 60%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 3;
+}
+.clock .hand.minute {
+  width: 4px;
+  width: 80%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  z-index: 4;
+}
+.clock .hand.second {
+  width: 2px;
+  width: 90%;
+  transform: translate(-50%, -50%) rotate(100deg);
+  z-index: 5;
+}
+.clock .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.timezone {
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
