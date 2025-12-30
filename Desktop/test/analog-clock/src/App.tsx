@@ -14,14 +14,11 @@ function App() {
   const { hour, minute, second } = useTime(time, selectedZone);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
 
-    // return function cleanup() {
-    //     console.log("cleaning up");
-    //     clearInterval(time);
-    //   };
+    return () => clearInterval(interval);
   }, []);
 
   const getSecondAngles = second * 6;
